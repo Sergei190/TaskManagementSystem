@@ -1,0 +1,18 @@
+jwt:
+  secret: 984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf
+  lifetime: 30m
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/db_task_management
+    username: postgres
+    password: postgres
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.xml
+  main:
+    allow-circular-references: true
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
