@@ -32,9 +32,11 @@ public class SecurityConfig {
     private UserServiceImpl userService;
     private JwtRequestFilter jwtRequestFilter;
 
-    @Autowired
-    @Qualifier("delegatedAuthenticationEntryPoint")
-    AuthenticationEntryPoint authEntryPoint;
+    final AuthenticationEntryPoint authEntryPoint;
+
+    public SecurityConfig(@Qualifier("delegatedAuthenticationEntryPoint") AuthenticationEntryPoint authEntryPoint) {
+        this.authEntryPoint = authEntryPoint;
+    }
 
     @Autowired
     public void setUserService(UserServiceImpl userService) {
