@@ -51,7 +51,7 @@ public class ErrorHandler {
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public ErrorResponse handleAuthenticationException(Exception ex) {
         log.info("401: {}", ex.getMessage());
-        String reason = "Ошибка авторизации";
+        String reason = "Ошибка аутентификации";
         return getErrorResponse(HttpStatus.UNAUTHORIZED, reason, ex.getMessage());
     }
 
