@@ -24,6 +24,7 @@ public class CommentMapper {
     public OutCommentDto toOutCommentDto(Comment comment) {
         return OutCommentDto.builder()
                 .id(comment.getId())
+                .taskId(comment.getTask().getId())
                 .text(comment.getText())
                 .authorName(comment.getUser().getName())
                 .created(comment.getCreated())

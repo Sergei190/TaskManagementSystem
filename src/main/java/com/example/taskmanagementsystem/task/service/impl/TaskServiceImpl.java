@@ -26,7 +26,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -171,12 +173,13 @@ public class TaskServiceImpl implements TaskService {
         List<Long> taskIds = tasks.stream()
                 .map(Task::getId)
                 .toList();
-        List<OutCommentDto> tasksComments = commentRepository.findCommentsByTaskIdIn(taskIds).stream()
+        Map<Long, List<OutCommentDto>> taskCommentsMap = commentRepository.findCommentsByTaskIdIn(taskIds).stream()
                 .map(CommentMapper::toOutCommentDto)
-                .collect(Collectors.toList());
+                .collect(Collectors.groupingBy(OutCommentDto::getTaskId));
+
         return tasks.stream()
-                .map(fullTaskDto -> TaskMapper.toFullTaskDto(fullTaskDto, tasksComments))
-                .toList();
+                .map(task -> TaskMapper.toFullTaskDto(task, taskCommentsMap.getOrDefault(task.getId(), Collections.emptyList())))
+                .collect(Collectors.toList());
     }
 
     private void checkUser(long userId) {

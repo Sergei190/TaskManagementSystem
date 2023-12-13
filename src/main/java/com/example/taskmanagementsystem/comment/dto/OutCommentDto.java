@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 public class OutCommentDto {
 
     private long id;
+    private long taskId;
     private String text;
     private String authorName;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
