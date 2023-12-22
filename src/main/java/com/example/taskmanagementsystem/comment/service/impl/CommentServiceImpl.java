@@ -71,4 +71,5 @@ public class CommentServiceImpl implements CommentService {
         }
         commentRepository.deleteById(comId);
     }
+
 }

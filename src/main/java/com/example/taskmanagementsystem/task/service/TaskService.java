@@ -24,4 +24,5 @@ public interface TaskService {
     List<FullTaskDto> getTasksByCreatorId(long creatorId, Sort sort, int from, int size);
 
     List<FullTaskDto> getTasksByExecutorId(long executorId, Sort sort, int from, int size);
+
 }

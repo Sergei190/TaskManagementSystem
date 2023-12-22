@@ -246,4 +246,5 @@ public class TaskControllerTest {
                 .andExpect(jsonPath("$.[0].status", is(fullTaskDto.getStatus().toString())))
                 .andExpect(jsonPath("$.[0].priority", is(fullTaskDto.getPriority().toString())));
     }
+
 }

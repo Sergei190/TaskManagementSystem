@@ -25,4 +25,5 @@ public class DelegatedAuthenticationEntryPoint implements AuthenticationEntryPoi
             throws IOException, ServletException {
         resolver.resolveException(request, response, null, authException);
     }
+
 }

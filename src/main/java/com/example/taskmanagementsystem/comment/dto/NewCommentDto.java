@@ -16,4 +16,5 @@ public class NewCommentDto {
     @NotBlank(message = "Комментарий не может быть пустым")
     @Size(min = 5, max = 200)
     private String text;
+
 }

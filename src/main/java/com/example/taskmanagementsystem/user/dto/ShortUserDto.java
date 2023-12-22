@@ -13,4 +13,5 @@ public class ShortUserDto {
 
     private long id;
     private String name;
+
 }

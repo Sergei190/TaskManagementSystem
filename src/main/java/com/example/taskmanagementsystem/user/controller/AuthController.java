@@ -33,4 +33,5 @@ public class AuthController {
         log.info("Запрос на добавление пользователя");
         return authService.createNewUser(incomeUserDto);
     }
+
 }

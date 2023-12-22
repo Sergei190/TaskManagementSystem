@@ -51,4 +51,5 @@ public class AuthServiceImpl implements AuthService {
         UserDto user = userService.addUser(incomeUserDto);
         return ResponseEntity.ok(user);
     }
+
 }

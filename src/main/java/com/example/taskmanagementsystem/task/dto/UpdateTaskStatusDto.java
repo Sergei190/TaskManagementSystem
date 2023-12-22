@@ -10,4 +10,5 @@ import lombok.*;
 public class UpdateTaskStatusDto {
 
     private String status;
+
 }

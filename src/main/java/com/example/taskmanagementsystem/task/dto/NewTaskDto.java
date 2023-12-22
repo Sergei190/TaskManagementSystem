@@ -30,4 +30,5 @@ public class NewTaskDto {
     private String priority;
 
     private Long executor_id;
+
 }

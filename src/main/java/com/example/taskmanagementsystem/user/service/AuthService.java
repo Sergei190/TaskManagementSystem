@@ -10,4 +10,5 @@ public interface AuthService {
     ResponseEntity<?> createAuthToken(@RequestBody JwtRequest authRequest);
 
     ResponseEntity<?> createNewUser(@RequestBody IncomeUserDto incomeUserDto);
+
 }

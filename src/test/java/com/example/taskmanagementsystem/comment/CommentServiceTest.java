@@ -184,4 +184,5 @@ public class CommentServiceTest {
                 commentService.updateComment(10L, author.getId(), newCommentDto));
         Assertions.assertEquals("Комментарий не найден", exception.getMessage());
     }
+
 }

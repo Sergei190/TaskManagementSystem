@@ -21,4 +21,5 @@ public class UpdateTaskDto {
     private String priority;
 
     private Long executor_id;
+
 }

@@ -31,8 +31,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-
-
 @Service
 @Transactional
 public class TaskServiceImpl implements TaskService {
@@ -196,4 +194,5 @@ public class TaskServiceImpl implements TaskService {
         }
         return task;
     }
+
 }

@@ -23,4 +23,5 @@ public class IncomeUserDto {
     @NotBlank(message = "Ошибка валидации. Пароль не может быть пустой")
     @Size(min = 6, message = "Ошибка валидации. Пароль не может быть короче 6 символов")
     private String password;
+
 }

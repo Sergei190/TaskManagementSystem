@@ -94,4 +94,5 @@ public class TaskController {
                 .orElseThrow(() -> new BadRequestException("Неподдерживаемый вариант сортировки: " + sort));
         return taskService.getTasksByExecutorId(executorId, enumSort, from, size);
     }
+
 }

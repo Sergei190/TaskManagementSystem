@@ -9,5 +9,4 @@
     </changeSet>
 
     <include file="create-tables.xml" relativeToChangelogFile="true"/>
-
 </databaseChangeLog>

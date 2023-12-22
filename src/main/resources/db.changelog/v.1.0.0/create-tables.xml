@@ -103,4 +103,5 @@
             <column name="name" value="USER"/>
         </insert>
     </changeSet>
+
 </databaseChangeLog>

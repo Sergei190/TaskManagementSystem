@@ -492,4 +492,5 @@ public class TaskServiceTest {
 
         Assertions.assertEquals(1, fullTaskDtos.size());
     }
+
 }
